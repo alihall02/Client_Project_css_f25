@@ -17,7 +17,7 @@
                 <li><img class="logo" src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo"></li>
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "resume.html">Resumes</a></li>
-                <li><a href= "networkingconnections.html">Networking & Connections</a></li>
+                <li><a href= "networkingconnections.html" class="active">Networking & Connections</a></li>
                 <li><a href= "portfolio.html">Portfolio</a></li>
             </ul>
         </nav>
@@ -97,5 +97,9 @@
     </main>
 
     <footer tabindex="0">
-        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
-    </footer>
+        <p>University of Michigan School of Information | <span id="year"></span> | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        </footer>
+
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>

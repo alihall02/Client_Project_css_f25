@@ -18,7 +18,7 @@
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "resume.html">Resumes</a></li>
                 <li><a href= "networkingconnections.html">Networking & Connections</a></li>
-                <li><a href= "portfolio.html">Portfolio</a></li>
+                <li><a href= "portfolio.html" class="active">Portfolio</a></li>
             </ul>
         </nav>
     <h1>Portfolio Support and Resources</h1>
@@ -102,7 +102,11 @@
     </main>
 
     <footer tabindex="0">
-        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
-    </footer>
+        <p>University of Michigan School of Information | <span id="year"></span> | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        </footer>
+
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
 
     </body>

@@ -15,15 +15,25 @@
         <nav>
             <ul>
                 <li><img class="logo" src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo"></li>
-                <li><a href = "index.html">Home</a></li>
+                <li><a href = "index.html" class="active">Home</a></li>
                 <li><a href = "resume.html">Resumes</a></li>
                 <li><a href= "networkingconnections.html">Networking & Connections</a></li>
                 <li><a href= "portfolio.html">Portfolio</a></li>
             </ul>
         </nav>
     <h1>Welcome to the UMSI Career Development Resource Hub</h1>
-
     </header>
+<div id="Sidepanel" class="sidepanel"> <!-- code sourced and modified from https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+  <a href="javascript:void(0)" class="close" onclick="closeNav()">×</a>
+  <ul>
+    <li><a href="https://umich.instructure.com/courses/137916/modules">CDO Resources</a></li>
+    <li><a href="https://umich.instructure.com/courses/137916/pages/searching-for-job-and-slash-or-internship-postings?module_item_id=3808117">Job Resources</a></li>
+    <li><a href="resume.html">Resume Help</a></li>
+    <li><a href="portfolio.html">Portfolio Tips</a></li>
+    </ul>
+</div>
+
+<button class="open" id="open" onclick="openNav()">☰</button>
     <main id="main" class="container">
     <section class="skip" tabindex="0">
       <h2>Your Central Hub for Career Success at UMSI</h2>
@@ -80,7 +90,23 @@
         UMGPT. (2025). UMGPT ( GPT-4.1 August 25th version) [Large language model]. -->
     </main>
     <footer tabindex="0">
-        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        <p>University of Michigan School of Information | <span id="year"></span> | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
         </footer>
+
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+<!-- code sourced and modified from https://www.w3schools.com/howto/howto_js_sidenav.asp -->
+<script>
+function openNav() {
+  document.getElementById("Sidepanel").style.width = "250px";
+  document.getElementById("open").style.display = "none";
+}
+
+function closeNav() {
+  document.getElementById("Sidepanel").style.width = "0";
+  document.getElementById("open").style.display = "block";
+}
+</script> 
 </body>
 </html>
